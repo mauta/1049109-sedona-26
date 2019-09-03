@@ -1,7 +1,8 @@
 # Личный проект «Седона»
 
 * Студент: [Анна Опарева](https://up.htmlacademy.ru/htmlcss/26/user/1049109).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Шершнев](https://htmlacademy.ru/profile/shv_sergey)
+
 
 ---
 
