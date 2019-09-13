@@ -8,23 +8,24 @@
 
 <body>
   <header>
-    <a href="/index.html"><img src="/img/logo-sedona.svg" width="140" height="71" alt="Логотип  Седона"></a>
+    <a href="index.html"><img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип  Седона"></a>
     <nav>
       <ul>
         <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
         <li><a href="#">Карта штата</a></li>
-        <li><a href="/hotels.html">Гостиницы</a></li>
+        <li><a href="hotels.html">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <h1>Седона</h1>
+    <h1 class="visually-hidden">Седона</h1>
     <!-- банер седона -->
 
     <!-- крутость седоны -->
     <section>
-      <h2>5 причин крутости Седоны</h2>
+     
+      <h2 class="visually-hidden">5 причин крутости Седоны</h2>
       <p>Седона — небольшой городок в Аризоне,
         заслуживающий большего!</p>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -35,7 +36,7 @@
             <h3>Настоящий городок</h3>
             <p>— №1 —</p>
             <p>Седона — не аттракцион для туристов,там течет своя жизнь</p>
-            <img src="/img/sedona.jpg" alt="фото Седоны" width="800" height="256">
+            <img src="img/sedona.jpg" alt="фото Седоны" width="800" height="256">
           </div>
           <ul>
             <li>
@@ -62,7 +63,7 @@
           <h3>Там есть <br>Мост дьявола</h3>
           <p>— №2 —</p>
           <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-          <img src="/img/brige.jpg" alt="фото моста дьявола" width="800" height="256">
+          <img src="img/brige.jpg" alt="фото моста дьявола" width="800" height="256">
         </li>
         <li>
           <h3>Небольшая <br>площадь</h3>
@@ -84,21 +85,21 @@
     </section>
     <!-- поиск гостиницы ИНТРО-->
     <section>
-      <h2>Реклама поиска гостиницы</h2>
+      <h2  class="visually-hidden">Реклама поиска гостиницы</h2>
       <p>Заинтересовались?</p>
       <p>
         Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 
-      <!-- форма поиска гостиницы -->
+        <button type="button"> Поиск гостиницы в Седоне </button>
 
-      <h2>Поиск гостиницы в Седоне</h2>
-      <!-- формы -->
-      <button>Найти</button>
+      
     </section>
 
 
 
   </main>
+
+  
 
   <footer>
     <p>#visitsedona</p>
@@ -113,6 +114,33 @@
       website by <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
     </p>
   </footer>
+
+  <section>
+    <h2 >Поиск гостиницы в Седоне</h2>
+    <form action="">
+      <p>
+        <label for="input_data_check_in">Дата Заезда</label>
+        <input type="text" id="input_data_check_in" pattern="" placeholder="24 апреля 2017">
+      </p>
+      <p>
+        <label for="input_data_check_out">Дата Выезда</label>
+        <input type="date" id="input_data_check_out">
+      </p>
+      <p>
+        <label for="count_adult">Взрослые:</label>
+        <button type="button"> - </button>
+        <input type="number" id="count_adult" step="1" min="0" placeholder="0">
+        <button type="button"> + </button>
+      </p>
+      <p>
+        <label for="Count_child">Дети:</label>
+        <button type="button"> - </button>
+        <input type="number" id="Count_child" step="1" min="0" placeholder="0">
+        <button type="button"> + </button>
+      </p>
+    </form>
+    <button>Найти</button>
+  </section>
 </body>
 
 </html>
