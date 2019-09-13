@@ -116,15 +116,15 @@
   </footer>
 
   <section>
-    <h2 >Поиск гостиницы в Седоне</h2>
-    <form action="">
+    <h2>Поиск гостиницы в Седоне</h2>
+    <form action="https://echo.htmlacademy.ru" method="get">
       <p>
-        <label for="input_data_check_in">Дата Заезда</label>
-        <input type="text" id="input_data_check_in" pattern="" placeholder="24 апреля 2017">
+        <label for="data_check_in">Дата Заезда</label>
+        <input type="text" id="data_check_in" pattern="" placeholder="24 апреля 2017">
       </p>
       <p>
-        <label for="input_data_check_out">Дата Выезда</label>
-        <input type="date" id="input_data_check_out">
+        <label for="data_check_out">Дата Выезда</label>
+        <input type="date" id="data_check_out">
       </p>
       <p>
         <label for="count_adult">Взрослые:</label>
@@ -133,13 +133,14 @@
         <button type="button"> + </button>
       </p>
       <p>
-        <label for="Count_child">Дети:</label>
+        <label for="сount_child">Дети:</label>
         <button type="button"> - </button>
         <input type="number" id="Count_child" step="1" min="0" placeholder="0">
         <button type="button"> + </button>
       </p>
+      <button type="submit" >Найти</button>
     </form>
-    <button>Найти</button>
+    
   </section>
 </body>
 

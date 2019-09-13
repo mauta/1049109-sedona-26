@@ -23,46 +23,58 @@
     <!-- фильтр  гостиниц -->
     <section>
       <h2 class="visually-hidden">Фильтр гостиниц</h2>
-      <fieldset>
-        <legend>Инфраструктура:</legend>
-        <p>
-        <input type="checkbox" id="infro_swimming_pool" checked>
-        <label for="infro_swimming_pool">Бассейн</label>
-        </p>
-        <p>
-        <input type="checkbox" id="infro_parking">
-        <label for="infro_parking">Парковка</label>
-        </p>
-        <p>
-        <input type="checkbox" id="infro_wi-fi">
-        <label for="infro_wi-fi">wi-fi</label>
-        </p>
-      </fieldset>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <p>
+            <input type="checkbox" id="infrastructure_swimming_pool" name="swimming_pool" checked>
+            <label for="infrastructure_swimming_pool">Бассейн</label>
+          </p>
+          <p>
+            <input type="checkbox" id="infrastructure_parking" name="parking">
+            <label for="infrastructure_parking">Парковка</label>
+          </p>
+          <p>
+            <input type="checkbox" id="infrastructure_wi-fi" name="wi-fi">
+            <label for="infrastructure_wi-fi">wi-fi</label>
+          </p>
+        </fieldset>
 
-      <fieldset>
-        <legend>Тип жилья:</legend>
-        <p>
-        <input type="checkbox" id="housing_hotel" checked>
-        <label for="housing_hotel">Гостиница</label>
-        </p>
-        <p>
-        <input type="checkbox" id="housing_motel" checked>
-        <label for="housing_motel">Мотель</label>
-        </p>
-        <p>
-        <input type="checkbox" id="housing_apartments" checked>
-        <label for="housing_apartments">Апартаменты</label>
-        </p>
-      </fieldset>
+        <fieldset>
+          <legend>Тип жилья:</legend>
+          <p>
+            <input type="checkbox" id="housing_hotel" name="hotel" checked>
+            <label for="housing_hotel">Гостиница</label>
+          </p>
+          <p>
+            <input type="checkbox" id="housing_motel" name="motel" checked>
+            <label for="housing_motel">Мотель</label>
+          </p>
+          <p>
+            <input type="checkbox" id="housing_apartments" name="apartments" checked>
+            <label for="housing_apartments">Апартаменты</label>
+          </p>
+        </fieldset>
 
-      <p>
-        <label for="">Стоимость в сутки(р):</label>
-        <input name="cost_in_day" type="text" min="0" value="от 0">
-        <input name="cost_in_day" type="text" max="3000" value="до 3000">
-        <!-- двойной ползунок -->
-      </p>
+        <fieldset>
+          <legend>Стоимость в сутки(р):</legend>
+          <p>
+            <label class="visually-hidden" for="cost_min"></label>
+            <span>от</span>
+            <input id="cost_min" name="cost_in_day" type="number" min="0" value="0">
+          </p>
+          <p>
+            <label class="visually-hidden" for="cost_max"></label>
+            <span>до</span>
+            <input id="cost_max" name="cost_in_day" type="number" max="3000" value="3000">
+          </p>
 
-      <button type="submit">Показать</button>
+          <!-- двойной ползунок -->
+        </fieldset>
+
+        <button type="submit">Показать</button>
+      </form>
+      
     </section>
 
     <section>
@@ -103,7 +115,7 @@
           </div>
         </li>
         <li>
-          <img src="img/villas.jpg"  width="135" height="90" alt="фото Amara Resort & spa">
+          <img src="img/villas.jpg" width="135" height="90" alt="фото Amara Resort & spa">
           <div>
             <h3>Villas at poco diablo</h3>
             <span>Апартаменты</span>
