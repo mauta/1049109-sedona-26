@@ -120,22 +120,22 @@
     <form action="https://echo.htmlacademy.ru" method="get">
       <p>
         <label for="data_check_in">Дата Заезда</label>
-        <input type="text" id="data_check_in" pattern="" placeholder="24 апреля 2017">
+        <input type="text" id="data_check_in" name="data_check_in" placeholder="24 апреля 2017">
       </p>
       <p>
         <label for="data_check_out">Дата Выезда</label>
-        <input type="date" id="data_check_out">
+        <input type="text" id="data_check_out" name="data_check_out" placeholder="24 апреля 2017">
       </p>
       <p>
         <label for="count_adult">Взрослые:</label>
         <button type="button"> - </button>
-        <input type="number" id="count_adult" step="1" min="0" placeholder="0">
+        <input type="number" id="count_adult" name="count_adult" step="1" min="0" placeholder="0">
         <button type="button"> + </button>
       </p>
       <p>
         <label for="сount_child">Дети:</label>
         <button type="button"> - </button>
-        <input type="number" id="Count_child" step="1" min="0" placeholder="0">
+        <input type="number" id="Count_child" name="Count_child" step="1" min="0" placeholder="0">
         <button type="button"> + </button>
       </p>
       <button type="submit" >Найти</button>
