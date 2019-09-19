@@ -1,0 +1,286 @@
+.body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "PT Sans";
+  color: rgb(0, 0, 0);
+
+  text-transform: uppercase;
+  line-height: 26px;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: auto;
+
+  text-align: center;
+
+  background-color: #ffffff;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.header {
+  font-weight: bold;
+}
+
+.link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.list {
+  list-style: none;
+
+}
+
+.header__nav:hover,
+.header__nav:focus {
+  color: #81b3d2;
+  outline: none;
+}
+
+.header__nav:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.welcome {
+  height: 500px;
+  width: auto;
+  background-color: burlywood;
+  background-image: url(/img/intro-mask.svg), url(/img/welcome.png), url(/img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: auto, 40%, cover;
+  background-position: center 443px, center 70px, center -35px;
+}
+
+.title {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+}
+
+.advantages__item {
+  display: block;
+  width: 400px;
+  height: 256px;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  background-color: #eeeeee;
+  padding-top: 50px;
+}
+
+.advantages__item--blue {
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+
+.title--big {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: bold;
+}
+
+.search__button {
+  width: 568px;
+  height: 86px;
+  background-color: #766357;
+  color: #ffffff;
+  border: none;
+
+
+  font-family: "PT Sans";
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.search__button:hover,
+.search__button:focus,
+.button:hover,
+.button:focus {
+  background-color: #604e43;
+  outline: none;
+}
+
+
+.search__button:active,
+.button:active {
+  color: rgba(255, 255, 255, 0.2);
+  background-color: #503e33;
+}
+
+.search__map {
+  width: 1200px;
+  height: 472px;
+  background-image: url(/img/map.jpg);
+}
+
+.modal {
+  width: 568px;
+  height: 395px;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+.modal__input {
+  width: 346px;
+  height: 38px;
+  background-color: #f2f2f2;
+  border: none;
+  color: #000000;
+  font-weight: bold;
+  text-transform: uppercase;
+
+}
+
+.modal__input--small {
+  width: 38px;
+  text-align: center;
+
+}
+
+.button__count {
+  background-color: #f2f2f2;
+  border: none;
+  width: 39px;
+  height: 39px;
+
+}
+
+.modal__button {
+  width: 458px;
+  height: 58px;
+  background-color: #81b3d2;
+  color: #ffffff;
+  font-family: "PT Sans";
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+}
+
+.modal__button:hover,
+.modal__button:focus,
+.button--blue:hover,
+.button--blue:focus {
+  background-color: #669ec0;
+}
+
+.modal__button:active,
+.button--blue:active {
+  background-color: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.filter {
+  background-color: #5496bd;
+  background-image: url(/img/filter-background.jpg);
+  color: #ffffff;
+  text-align: left;
+}
+
+.filter__legend {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.filter__fieldset {
+  border: none;
+}
+
+.filter__input {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+
+}
+
+.filter__button {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  width: 133px;
+  height: 32px;
+  text-transform: uppercase;
+}
+
+.filter__button:hover {
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button {
+  display: block;
+  width: 142px;
+  height: 27px;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-transform: uppercase;
+  background-color: #766357;
+}
+
+.button--blue {
+  width: 110px;
+  background-color: #81b3d2;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 4px;
+}
+
+
+.hotels__rating {
+  width: 110px;
+  height: 27px;
+  background-color: #f2f2f2;
+  border: none;
+  color: #666666;
+}
+
+.sort__link {
+  font-family: "PT Sans";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.sort__link:focus{
+  color: #81b3d2;
+  border-bottom:none;
+  
+}
+
+.sort__link:hover{
+  color: #81b3d2;
+  border-bottom: 1px dotted #81b3d2;
+}
+
+.sort__link:active {
+  font-size: 12px;
+  border-bottom:none;
+  color: #000000;
+}
