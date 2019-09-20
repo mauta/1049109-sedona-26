@@ -60,7 +60,7 @@
   height: 500px;
   width: auto;
   background-color: burlywood;
-  background-image: url(/img/intro-mask.svg), url(/img/welcome.png), url(/img/background.jpg);
+  background-image: url(../img/intro-mask.svg), url(../img/welcome.png), url(../img/background.jpg);
   background-repeat: no-repeat;
   background-size: auto, 40%, cover;
   background-position: center 443px, center 70px, center -35px;
@@ -128,7 +128,7 @@
 .search__map {
   width: 1200px;
   height: 472px;
-  background-image: url(/img/map.jpg);
+  background-image: url(../img/map.jpg);
 }
 
 .modal {
@@ -195,7 +195,7 @@
 
 .filter {
   background-color: #5496bd;
-  background-image: url(/img/filter-background.jpg);
+  background-image: url(../img/filter-background.jpg);
   color: #ffffff;
   text-align: left;
 }
