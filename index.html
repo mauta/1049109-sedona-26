@@ -11,15 +11,16 @@
 </head>
 
 <body class="body">
-  <div class="wrapper">
+  <div class="wrapper-center">
     <header class="header">
-      <a href="index.html"><img src="img/logo-sedona.svg" width="140" height="71" alt="Логотип  Седона"></a>
+      <a class="header__logo" href="index.html"><img src="img/logo-sedona.svg" width="140" height="72"
+          alt="Логотип  Седона"></a>
       <nav>
-        <ul class="list ">
-          <li><a class="link header__nav" href="#">Информация</a></li>
-          <li><a class="link header__nav" href="#">Фото и видео</a></li>
-          <li><a class="link header__nav" href="#">Карта штата</a></li>
-          <li><a class="link header__nav" href="hotels.html">Гостиницы</a></li>
+        <ul class="list header__nav--wrap ">
+          <li><a class="link header__nav header__nav--left" href="#">Информация</a></li>
+          <li><a class="link header__nav header__nav--left" href="#">Фото и видео</a></li>
+          <li class="right"><a class="link header__nav header__nav--right" href="#">Карта штата</a></li>
+          <li class="right"><a class="link header__nav header__nav--right" href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -31,13 +32,16 @@
       <section class="advantages">
 
         <h2 class="visually-hidden">5 причин крутости Седоны</h2>
-        <p class="title">Седона — небольшой городок в Аризоне,
-          заслуживающий большего!</p>
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
 
-        <ul class="list">
+        <div class="advantages__text">
+          <p class="title">Седона — небольшой городок в Аризоне,
+            заслуживающий большего!</p>
+          <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+
+        </div>
+        <ul class="list advantages__wrap">
           <li>
-            <div>
+            <div class="advantages__item-img">
               <div class="advantages__item--blue advantages__item">
                 <h3 class="title">Настоящий городок</h3>
                 <p>— №1 —</p>
@@ -45,20 +49,21 @@
               </div>
               <img src="../img/sedona.jpg" alt="фото Седоны" width="800" height="256">
             </div>
-            <ul class="list">
-              <li>
+
+            <ul class="list advantages__list-wrap">
+              <li class="advantages__list">
                 <!-- иконка на фон -->
 
                 <h4 class="title">Жильё</h4>
                 <p>Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
-              <li>
+              <li class="advantages__list">
                 <!-- иконка на фон -->
 
                 <h4 class="title">Еда</h4>
                 <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
-              <li>
+              <li class="advantages__list">
                 <!-- иконка на фон -->
 
                 <h4 class="title">Сувениры</h4>
@@ -67,31 +72,36 @@
             </ul>
           </li>
           <li>
-            <div>
+            <div class="advantages__item-img">
+              <img src="../img/bridge.jpg" alt="фото моста дьявола" width="800" height="256">
               <div class="advantages__item--blue advantages__item">
                 <h3 class="title">Там есть <br>Мост дьявола</h3>
                 <p>— №2 —</p>
                 <p>Да, по нему можно пройти! Если конечно <br> вы осмелитесь</p>
               </div>
-              <img src="../img/brige.jpg" alt="фото моста дьявола" width="800" height="256">
             </div>
           </li>
-          <li  class="advantages__item">
-            <div>
-            <h3 class="title">Небольшая <br>площадь</h3>
-            <p>— №3 —</p>
-            <p>Все достопримечательности <br> находятся очень близко</p>
-          </div>
+
+          <li class="advantages__item">
+            <div class="advantages__list">
+              <h3 class="title">Небольшая <br> площадь</h3>
+              <p>— №3 —</p>
+              <p>Все достопримечательности находятся очень близко</p>
+            </div>
           </li>
           <li class="advantages__item">
-            <h3 class="title">Красивая <br> дорога</h3>
-            <p>— №4 —</p>
-            <p>Ехать в Седону из Лас-Вегаса совсем <br> не скучно!</p>
+            <div class="advantages__list">
+              <h3 class="title">Красивая <br> дорога</h3>
+              <p>— №4 —</p>
+              <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </div>
           </li>
           <li class="advantages__item">
-            <h3 class="title">Мало <br> туристов</h3>
-            <p>— №5 —</p>
-            <p>Большинство едет в Гранд Каньон <br> и толпится там</p>
+            <div class="advantages__list">
+              <h3 class="title">Мало <br> туристов</h3>
+              <p>— №5 —</p>
+              <p>Большинство едет в Гранд Каньон и толпится там</p>
+            </div>
           </li>
         </ul>
 
@@ -115,21 +125,24 @@
 
 
     <footer>
-      <p class="title">#visitsedona</p>
 
-      <ul class="list">
-        <li><a class="link" href="#">Твитер</a></li>
-        <li><a class="link" href="#">Фейсбук</a></li>
-        <li><a class="link" href="#">Ютуб</a></li>
-      </ul>
-
-      <p>
-        website by <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-      </p>
+<div class="footer__list">
+        <p class="title">#visitsedona</p>
+  
+        <ul class="list">
+          <li><a class="link" href="#">Твитер</a></li>
+          <li><a class="link" href="#">Фейсбук</a></li>
+          <li><a class="link" href="#">Ютуб</a></li>
+        </ul>
+  
+        <p>
+          website by <a class="link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+        </p>
+</div>
     </footer>
   </div>
   <section class="modal">
-    <h2  class="visually-hidden">Поиск гостиницы в Седоне</h2>
+    <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
     <form action="https://echo.htmlacademy.ru" method="get">
       <p>
         <label for="data_check_in">Дата Заезда:</label>
@@ -142,13 +155,15 @@
       <p>
         <label for="count_adult">Взрослые:</label>
         <button class="button__count" type="button"> - </button>
-        <input class="modal__input modal__input--small " type="text" id="count_adult" name="count_adult" pattern="[0-9]{,3}" step="1" min="0" placeholder="0">
+        <input class="modal__input modal__input--small " type="text" id="count_adult" name="count_adult"
+          pattern="[0-9]{,3}" step="1" min="0" placeholder="0">
         <button class="button__count" type="button"> + </button>
       </p>
       <p>
         <label for="сount_child">Дети:</label>
         <button class="button__count" type="button"> - </button>
-        <input class="modal__input modal__input--small" type="text" id="count_child" name="count_child" pattern="[0-9]{,3}" step="1" min="0" placeholder="0">
+        <input class="modal__input modal__input--small" type="text" id="count_child" name="count_child"
+          pattern="[0-9]{,3}" step="1" min="0" placeholder="0">
         <button class="button__count" type="button"> + </button>
       </p>
       <button class="modal__button" type="submit">Найти</button>

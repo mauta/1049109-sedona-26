@@ -9,9 +9,10 @@
   line-height: 26px;
   text-align: center;
   background-color: #f2f2f2;
+
 }
 
-.wrapper {
+.wrapper-center {
   max-width: 1200px;
   margin: auto;
 
@@ -34,16 +35,16 @@
 
 .header {
   font-weight: bold;
+  position: relative;
 }
 
-.link {
-  text-decoration: none;
-  color: #000000;
-}
+
 
 .list {
   list-style: none;
-
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .header__nav:hover,
@@ -76,7 +77,6 @@
   display: block;
   width: 400px;
   min-height: 256px;
-  border: 1px solid #ffffff;
   box-sizing: border-box;
   background-color: #eeeeee;
   padding-top: 50px;
@@ -198,6 +198,18 @@
   background-image: url(../img/filter-background.jpg);
   color: #ffffff;
   text-align: left;
+
+
+}
+
+.filter__wrap {
+  padding-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.filter__fieldset--last {
+  margin-left: auto;
 }
 
 .filter__legend {
@@ -207,6 +219,8 @@
 
 .filter__fieldset {
   border: none;
+  /* падинг из головы, сейчас просто чтобы блоки раскидать */
+  padding-left: 30px;
 }
 
 .filter__input {
@@ -251,7 +265,7 @@
   background-color: #81b3d2;
   text-align: center;
   box-sizing: border-box;
-  padding-top: 4px;
+  padding-top: 7px;
 }
 
 
@@ -290,3 +304,176 @@
   border-bottom: none;
   color: #000000;
 }
+
+.link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.header__nav {
+  display: block;
+  box-sizing: border-box;
+  width: 239px;
+  padding-top: 14px;
+  padding-bottom: 10px;
+}
+
+.header__nav--left {
+  padding-left: 52px;
+  /* по макету 72 */
+}
+
+.header__nav--right {
+  padding-right: 52px;
+  /* по макету 72 */
+}
+
+.header__nav--wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.header__nav--wrap::after {
+  content: '';
+  flex-grow: 1;
+  order: 0;
+}
+
+/* хочу вместо этого nth-child, но что-то не придумывается пока правило, 
+чтобы работало при переполнении контейнера  */
+
+.right {
+  order: 1;
+}
+
+
+
+.header__logo {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.advantages__wrap {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.advantages__text {
+  width: 490px;
+  margin-top: 60px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.advantages__item-img {
+  display: flex;
+  margin-top: 55px;
+}
+
+.advantages__list-wrap {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.advantages__list {
+  /* отступ временный, потом с иконками и ПП исправить */
+  margin: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 290px;
+  text-align: center;
+}
+
+.advantages__item {
+  max-height: 256px;
+  padding: 0;
+}
+
+.footer__list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.sort__wrap {
+  display: flex;
+  /* отступ временный, потом с иконками и ПП исправить */
+  padding-left: 20px;
+}
+
+
+.sort {
+  padding-left: 20px;
+}
+
+.sort__list {
+  display: flex;
+  align-items: center;
+  /* отступ временный, потом с иконками и ПП исправить */
+  justify-content: space-around;
+  width: 300px;
+}
+
+.button__wrap{
+  display: flex;
+  width: 258px;
+  justify-content: space-between;
+}
+
+.hotel__info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 258px;
+  max-height:90px; 
+  margin-left: 31px;
+  text-align: left;
+}
+
+.hotel__text1{
+  width: 110px;
+  padding-bottom: 5px;
+}
+.hotel__text2{
+  width: 142px;
+  padding-bottom: 5px;
+  
+}
+
+.hotel__title{
+  margin: 0;
+  padding-bottom: 5px;
+}
+.hotel__text--wrap{
+  display: flex;
+  justify-content: space-between
+}
+
+.hotel__wrap{
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 72px;
+  margin-left: 72px;
+  padding-top: 31px;
+  padding-bottom: 31px;
+  /* это сейчас полосочки, но это не верное решение
+  еще буду думать */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  
+}
+
+.filter__wrap {
+  padding-top: 20px;
+  display: flex;
+  
+}
+
+.hotels__rating--wrap {
+  margin-left: auto;
+}
+
+
