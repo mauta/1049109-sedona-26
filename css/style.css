@@ -456,14 +456,16 @@
 .hotel__wrap{
   display: flex;
   justify-content: flex-start;
-  margin-right: 72px;
-  margin-left: 72px;
+  padding-right: 72px;
+  padding-left: 72px;
   padding-top: 31px;
   padding-bottom: 31px;
-  /* это сейчас полосочки, но это не верное решение
-  еще буду думать */
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   
+}
+
+.hotel__wrap--first{
+  border-top: 1px solid rgba(0, 0, 0, 0.3); 
 }
 
 .filter__wrap {
