@@ -58,20 +58,20 @@
 }
 
 .welcome {
-  height: 500px;
+  height: 510px;
   width: auto;
   background-color: burlywood;
   background-image: url(../img/intro-mask.svg), url(../img/welcome.png), url(../img/background.jpg);
   background-repeat: no-repeat;
-  background-size: auto, 40%, cover;
-  background-position: center 443px, center 70px, center -35px;
+  background-size: auto, 39,5%, cover;
+  background-position: center 453px, center 76px, center -55px;
 }
 
 .title {
   font-size: 21px;
-  line-height: 21px;
-  font-weight: bold;
-}
+  line-height: 25px;
+  font-weight: 700;
+  }
 
 .advantages__item {
   display: block;
@@ -313,18 +313,18 @@
 .header__nav {
   display: block;
   box-sizing: border-box;
-  width: 239px;
+  width: 240px;
   padding-top: 14px;
   padding-bottom: 10px;
 }
 
 .header__nav--left {
-  padding-left: 52px;
+  padding-left: 2px;
   /* по макету 72 */
 }
 
 .header__nav--right {
-  padding-right: 52px;
+  padding-right:0px;
   /* по макету 72 */
 }
 
@@ -332,6 +332,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  margin-bottom: 5px;
 }
 
 .header__nav--wrap::after {
