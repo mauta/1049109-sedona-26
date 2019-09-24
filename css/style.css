@@ -33,18 +33,16 @@
   overflow: hidden;
 }
 
-.header {
-  font-weight: bold;
-  position: relative;
-}
-
-
-
 .list {
   list-style: none;
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.header {
+  font-weight: bold;
+  position: relative;
 }
 
 .header__nav:hover,
@@ -57,13 +55,67 @@
   color: rgba(0, 0, 0, 0.3);
 }
 
+
+
+.header__nav {
+  /* width: 263px; */
+  box-sizing: border-box;
+
+
+
+}
+
+.header__nav--first {
+  padding-right: 60px;
+}
+
+.header__nav--second {
+  padding-right: 175px;
+}
+
+.header__nav--third {
+  padding-left: 180px;
+  font-stretch: extra-expanded;
+}
+
+.header__nav--fourth {
+  padding-left: 79px;
+}
+
+.nav_item {
+  width: 25%;
+  margin-top: 14px;
+  margin-bottom: 10px;
+}
+
+.header__nav--wrap {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+
+
+
+
+.header__logo {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
 .welcome {
   height: 510px;
   width: auto;
   background-color: burlywood;
   background-image: url(../img/intro-mask.svg), url(../img/welcome.png), url(../img/background.jpg);
   background-repeat: no-repeat;
-  background-size: auto, 39,5%, cover;
+  background-size: auto, 39, 5%, cover;
   background-position: center 453px, center 76px, center -55px;
 }
 
@@ -71,7 +123,13 @@
   font-size: 21px;
   line-height: 25px;
   font-weight: 700;
-  }
+
+}
+
+.text {
+  padding-top: 8px;
+}
+
 
 .advantages__item {
   display: block;
@@ -310,57 +368,12 @@
   color: #000000;
 }
 
-.header__nav {
-  display: block;
-  box-sizing: border-box;
-  width: 240px;
-  padding-top: 14px;
-  padding-bottom: 10px;
-}
 
-.header__nav--left {
-  padding-left: 2px;
-  /* по макету 72 */
-}
-
-.header__nav--right {
-  padding-right:0px;
-  /* по макету 72 */
-}
-
-.header__nav--wrap {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  margin-bottom: 5px;
-}
-
-.header__nav--wrap::after {
-  content: '';
-  flex-grow: 1;
-  order: 0;
-}
-
-/* хочу вместо этого nth-child, но что-то не придумывается пока правило, 
-чтобы работало при переполнении контейнера  */
-
-.right {
-  order: 1;
-}
-
-
-
-.header__logo {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-}
 
 .advantages__wrap {
   display: flex;
   flex-wrap: wrap;
-
+  margin-top: 0px;
 }
 
 .advantages__text {
@@ -368,11 +381,21 @@
   margin-top: 60px;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 0px;
 }
+
+.advantages__title {
+  width: 150px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 45px;
+  line-height: 23px;
+}
+
 
 .advantages__item-img {
   display: flex;
-  margin-top: 55px;
+  margin-top: 36px;
 }
 
 .advantages__list-wrap {
@@ -388,11 +411,48 @@
   margin-right: auto;
   width: 290px;
   text-align: center;
+
+}
+
+.advantages__tricks {
+  position: relative;
+  margin-top: 130px;
+
+}
+
+.advantages__tricks::before {
+  content: "";
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  top: -69px;
+  left: 109px;
+  background-image: url("../img/icon-3.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+}
+
+.advantages__tricks:first-child::before {
+  background-image: url("../img/icon-1.svg");
+  top: -70px;
+  left: 107px;
+}
+
+.advantages__tricks:last-child::before {
+  background-image: url("../img/icon-2.svg");
+  top: -74px;
+  left: 114px;
 }
 
 .advantages__item {
-  max-height: 256px;
+  min-height: 256px;
   padding: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
 }
 
 .footer__list {
@@ -400,9 +460,22 @@
   justify-content: space-around;
 }
 
+.footer__first{
+ width: 240px;
+}
+
+.footer__second{
+width: 150px;
+display: flex;
+}
+
+.footer__third{
+  width: 240px;
+}
+
 .sort__wrap {
   display: flex;
-  
+
   /* отступ временный, потом с иконками и ПП исправить */
   padding-left: 20px;
 
@@ -421,42 +494,44 @@
   width: 300px;
 }
 
-.button__wrap{
+.button__wrap {
   display: flex;
   width: 258px;
   justify-content: space-between;
 }
 
-.hotel__info{
+.hotel__info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 258px;
-  max-height:90px; 
+  max-height: 90px;
   margin-left: 31px;
   text-align: left;
 }
 
-.hotel__text1{
+.hotel__text1 {
   width: 110px;
   padding-bottom: 5px;
 }
-.hotel__text2{
+
+.hotel__text2 {
   width: 142px;
   padding-bottom: 5px;
-  
+
 }
 
-.hotel__title{
+.hotel__title {
   margin: 0;
   padding-bottom: 5px;
 }
-.hotel__text--wrap{
+
+.hotel__text--wrap {
   display: flex;
   justify-content: space-between
 }
 
-.hotel__wrap{
+.hotel__wrap {
   display: flex;
   justify-content: flex-start;
   padding-right: 72px;
@@ -464,21 +539,19 @@
   padding-top: 31px;
   padding-bottom: 31px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  
+
 }
 
-.hotel__wrap--first{
-  border-top: 1px solid rgba(0, 0, 0, 0.3); 
+.hotel__wrap--first {
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .filter__wrap {
   padding-top: 20px;
   display: flex;
-  
+
 }
 
 .hotels__rating--wrap {
   margin-left: auto;
 }
-
-
