@@ -35,53 +35,71 @@
           <div class="filter__wrap">
             <fieldset class="filter__fieldset">
               <legend class="filter__legend">Инфраструктура:</legend>
-              <p>
-                <input type="checkbox" id="swimming_pool" name="swimming_pool" checked>
-                <label for="swimming_pool">Бассейн</label>
+              <p class="filter__item">
+                <label class="filter__check" for="swimming_pool">
+                  <input class="filter__checkbox-input" type="checkbox" id="swimming_pool" name="swimming_pool" checked>
+                  <span class="filter__checkbox"></span>
+                  Бассейн</label>
               </p>
-              <p>
-                <input type="checkbox" id="parking" name="parking">
-                <label for="parking">Парковка</label>
+              <p class="filter__item">
+                <label class="filter__check" for="parking">
+                  <input class="filter__checkbox-input" type="checkbox" id="parking" name="parking">
+                  <span class="filter__checkbox"></span>
+                  Парковка</label>
               </p>
-              <p>
-                <input type="checkbox" id="wi-fi" name="wi-fi">
-                <label for="wi-fi">wi-fi</label>
+              <p class="filter__item">
+                <label class="filter__check" for="wi-fi">
+                  <input class="filter__checkbox-input" type="checkbox" id="wi-fi" name="wi-fi">
+                  <span class="filter__checkbox"></span>
+                  wi-fi</label>
               </p>
             </fieldset>
 
             <fieldset class="filter__fieldset">
               <legend class="filter__legend">Тип жилья:</legend>
-              <p>
-                <input type="checkbox" id="housing_hotel" name="hotel" checked>
-                <label for="housing_hotel">Гостиница</label>
+              <p class="filter__item">
+                <label class="filter__check"  for="housing_hotel">
+                  <input class="filter__checkbox-input" type="checkbox" id="housing_hotel" name="hotel" checked>
+                  <span class="filter__checkbox"></span>
+                  Гостиница</label>
               </p>
-              <p>
-                <input type="checkbox" id="housing_motel" name="motel" checked>
-                <label for="housing_motel">Мотель</label>
+              <p class="filter__item">
+                <label class="filter__check"  for="housing_motel">
+                    <input class="filter__checkbox-input" type="checkbox" id="housing_motel" name="motel" checked>
+                    <span class="filter__checkbox"></span>
+                  Мотель</label>
               </p>
-              <p>
-                <input type="checkbox" id="housing_apartments" name="apartments" checked>
-                <label for="housing_apartments">Апартаменты</label>
+              <p class="filter__item">
+                <label class="filter__check"  for="housing_apartments">
+                    <input class="filter__checkbox-input" type="checkbox" id="housing_apartments" name="apartments" checked>
+                    <span class="filter__checkbox"></span>
+                  Апартаменты</label>
               </p>
             </fieldset>
 
-            <fieldset class="filter__fieldset filter__fieldset--last">
-              <legend class="filter__legend">Стоимость в сутки (р):</legend>
-              <p>
-                <label class="visually-hidden" for="cost_min"></label>
-                <span>от</span>
-                <input class="filter__input" id="cost_min" name="cost_in_day" type="text" value="0">
-              </p>
-              <p>
-                <label class="visually-hidden" for="cost_max"></label>
-                <span>до</span>
-                <input class="filter__input" id="cost_max" name="cost_in_day" type="text" value="3000">
-              </p>
-
-              <!-- двойной ползунок -->
-            </fieldset>
+             <fieldset class="filter__fieldset filter__fieldset--last">
+              <legend class="filter__legend--range">Стоимость в сутки (р):</legend>
+              
+               <div class="filter__price">
+                  <label class="filter__price-label filter__price-label--min" for="cost_min">
+                    от <input class="filter__price-input" id="cost_min" name="cost_in_day" type="text" value="0">
+                  </label>
+                                             
+                  <label class="filter__price-label filter__price-label--max" for="cost_max">
+                    до <input class="filter__price-input" id="cost_max" name="cost_in_day" type="text" value="3000">
+                  </label>
+               </div>
+                <div class="filter__range">
+                  <div class="filter__scale">
+                    <div class="filter__bar">    </div>
+                   </div>
+                  <div class="filter__toggle filter__togle--min"></div>
+                  <div class="filter__toggle filter__togle--max"></div>
+                </div>
+  
+            </fieldset> 
           </div>
-          <button class="filter__button" type="submit">Показать</button>
+        <button class="filter__button" type="submit">Показать</button> 
 
         </form>
 
@@ -102,12 +120,18 @@
             </ul>
           </div>
           <div class="sort__right">
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-              <path fill="#231F20" d="M5.5 0L0 10h11z" />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-              <path fill="#231F20" d="M5.5 10L0 0h11" />
-            </svg>
+
+           <span class="sort__right-up">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                <path fill="#cacaca" d="M5.5 0L0 10h11z" />
+              </svg>
+           </span>
+
+            <span class="sort__right-up">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                <path fill="#cacaca" d="M5.5 10L0 0h11" />
+              </svg>
+            </span>
           </div>
 
         </div>
