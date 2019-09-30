@@ -1,3 +1,11 @@
+/* НЕ ГЛОБАЛЬНЫЙ, ПЕРЕДЕЛАТЬ */
+.text {
+  padding-top: 8px;
+}
+
+
+/* Глобальное - Глобальное - Глобальное - Глобальное - Глобальное - Глобальное*/
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -59,86 +67,6 @@
   margin-bottom: 0;
 }
 
-.header {
-  font-weight: bold;
-  position: relative;
-}
-
-.header__nav:hover,
-.header__nav:focus {
-  color: #81b3d2;
-  outline: none;
-}
-
-.header__nav:active {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-
-
-.header__nav {
-  /* width: 263px; */
-  box-sizing: border-box;
-
-
-
-}
-
-.header__nav--first {
-  padding-right: 60px;
-}
-
-.header__nav--second {
-  padding-right: 175px;
-}
-
-.header__nav--third {
-  padding-left: 180px;
-  font-stretch: extra-expanded;
-}
-
-.header__nav--fourth {
-  padding-left: 79px;
-}
-
-.nav_item {
-  width: 25%;
-  margin-top: 14px;
-  margin-bottom: 10px;
-}
-
-.header__nav--wrap {
-  width: 1200px;
-  margin-right: auto;
-  margin-left: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 5px;
-}
-
-
-
-
-
-.header__logo {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-.welcome {
-  height: 510px;
-  width: auto;
-  background-color: burlywood;
-  background-image: url(../img/intro-mask.svg), url(../img/welcome.png), url(../img/background.jpg);
-  background-repeat: no-repeat;
-  background-size: auto, 39, 5%, cover;
-  background-position: center 453px, center 76px, center -55px;
-}
-
 .title {
   font-size: 21px;
   line-height: 25px;
@@ -146,11 +74,88 @@
 
 }
 
-.text {
-  padding-top: 8px;
+.link {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* Шапка - Шапка - Шапка - Шапка - Шапка - Шапка - Шапка - Шапка */
+
+.header {
+  font-weight: bold;
+position: relative;
+}
+
+.header__nav:hover,
+.header__nav:focus {
+color: #81b3d2;
+outline: none;
+}
+
+.header__nav:active {
+color: rgba(0, 0, 0, 0.3);
+}
+
+.header__nav--first {
+width: 23%;   
+text-align: left;
+
+}
+
+.header__nav--second {
+text-align: left;
+width: 27%;
+}
+
+.header__nav--third {
+text-align: right;
+width: 27%;
+}
+
+.header__nav--fourth {
+text-align: right;
+width: 23%;
+}
+
+.nav_item {
+margin-top: 14px;
+margin-bottom: 15px;
+}
+
+.header__nav--wrap {
+width: 1056px;  
+display: flex;
+flex-wrap: wrap;
+margin-right: auto;
+margin-left: auto;
+
+
+}
+
+.header__logo {
+position: absolute;
+left: 50%;
+top: 0;
+transform: translateX(-50%);
+z-index: 1;
+}
+
+/* welcome - welcome - welcome - welcome - welcome - welcome - welcome - welcome - welcome - welcome */
+
+.welcome {
+  height: 510px;
+  width: auto;
+  background-color:#435152;
+  background-image: url(../img/intro-mask.svg), url(../img/welcome.png), url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-size: auto, 39, 5%, cover;
+  background-position: center 453px, center 76px, center -55px;
 }
 
 
+
+
+/* Поиск - Поиск - Поиск - Поиск - Поиск - Поиск - Поиск - Поиск - Поиск - Поиск - Поиск - Поиск */
 
 
 
@@ -159,25 +164,31 @@
   font-size: 30px;
   line-height: 36px;
   font-weight: bold;
-  margin-top: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 22px;
 }
 
 .search {
-  min-height: 713px;
+  min-height: 716px;
   position: relative;
+  box-sizing: border-box;
+  padding-top:20px ;
 }
 
-
+.search__text{
+ 
+  margin-top: 0;
+  padding-top: 0;
+  
+}
 
 .search__button {
   width: 568px;
-  padding-top: 31px;
-  padding-bottom: 31px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #766357;
   color: #ffffff;
   border: none;
-  margin-top: 30px;
+  margin-top: 31px;
 
   font-family: "PT Sans";
   font-size: 21px;
@@ -204,8 +215,12 @@
 .search__map {
   width: 1200px;
   height: 594px;
+  
   background-image: url(../img/map.jpg);
 }
+
+
+/* Модалка - Модалка - Модалка - Модалка - Модалка - Модалка - Модалка - Модалка - Модалка */
 
 .modal {
   width: 568px;
@@ -215,25 +230,36 @@
   font-weight: bold;
   position: absolute;
   left: 50%;
-  top: 243px;
+  top: 289px;
   transform: translateX(-50%);
 }
 
 .modal__form {
   width: 458px;
-  min-height: 285px;
+  
   margin-right: auto;
   margin-left: auto;
   margin-top: 55px;
   margin-bottom: 55px;
   position: relative;
+  
+
+
+}
+
+.modal__item--wrap{
+  display: flex;
+  min-height: 175px; 
+  flex-direction: column;
+  justify-content: space-between;
+  
 }
 
 .modal__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 29px;
+  
   position: relative;
 }
 
@@ -269,19 +295,32 @@
   color: #000000;
   font-weight: bold;
   text-transform: uppercase;
+  box-sizing: border-box;
+  /* width: 100%; */
+  
+  padding-right: 30px;
+  padding-left: 12px;
 
+
+}
+
+.modal__calendar{
+  background-image: url("../img/calendar.svg");
+  background-position: 318px center;
+  background-repeat: no-repeat;
+  
 }
 
 .modal__input--small {
   width: 38px;
-  height: 37px;
+  height: 40px;
   text-align: center;
   border: none;
 }
 
 .modal__count {
   display: flex;
-  width: 114px;
+  width: 116px;
 
 }
 
@@ -301,8 +340,8 @@
 
 .modal__button {
   width: 458px;
-  padding-top: 17px;
-  padding-bottom: 22px;
+  padding-top: 15px;
+  padding-bottom: 17px;
   background-color: #81b3d2;
   color: #ffffff;
   font-family: "PT Sans";
@@ -311,9 +350,8 @@
   line-height: 26px;
   text-transform: uppercase;
   text-align: center;
-  vertical-align: middle;
   border: none;
-  margin-top: 13px;
+  margin-top: 53px; 
 }
 
 .modal__button:hover,
@@ -328,6 +366,9 @@
   background-color: #5496bd;
   color: rgba(255, 255, 255, 0.3);
 }
+
+
+/* Фильтр - Фильтр - Фильтр - Фильтр - Фильтр - Фильтр - Фильтр - Фильтр - Фильтр - Фильтр - Фильтр - Фильтр */
 
 .filter {
   background-color: #5496bd;
@@ -347,8 +388,6 @@
 
 }
 
-
-
 .filter__legend {
   font-size: 16px;
   font-weight: bold;
@@ -359,7 +398,7 @@
   border: none;
   
   width: 206px;
-  max-height: 150px;
+  min-height: 150px;
   
   margin-top: 25px;
   margin-left: 25px;
@@ -371,6 +410,7 @@
   height: 23px;
   background-image: url(../img/checkbox-off.svg);
   margin-left: -40px;
+  cursor: pointer;
 }
 
 .filter__item {
@@ -380,7 +420,7 @@
 
 .filter__check {
   padding-left: 78px;
-
+  cursor: pointer;
 }
 
 .filter__checkbox-input {
@@ -388,6 +428,7 @@
   -moz-appearance: none;
   appearance: none;
   position: absolute;
+  
 }
 
 .filter__checkbox-input:checked+.filter__checkbox {
@@ -401,6 +442,11 @@
 .filter__checkbox-input:disabled:checked+.filter__checkbox {
   background-image: url(../img/checkbox-on-dis.svg);
 }
+
+.filter__checkbox-input:focus ~ .filter__text{
+  color:rgba(255, 255, 255, 0.8);
+  }
+
 
 
 .filter__input {
@@ -484,7 +530,7 @@ position: relative;
 .filter__toggle{
   width: 4px;
   height: 4px;
-
+  
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
@@ -534,31 +580,13 @@ position: relative;
   color: #000000;
 }
 
-.button {
-  display: block;
-  width: 142px;
-
-  border: none;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 21px;
-  text-transform: uppercase;
-  background-color: #766357;
-}
-
-.button--blue {
-  width: 110px;
-  background-color: #81b3d2;
-  text-align: center;
-  box-sizing: border-box;
-  padding-top: 3px;
-}
 
 
+/* Сортировка - Сортировка - Сортировка - Сортировка - Сортировка - Сортировка - Сортировка - Сортировка - Сортировка */
 
 
 .sort__link {
+  min-width: 75px;
   font-family: "PT Sans";
   font-size: 12px;
   font-weight: 400;
@@ -585,12 +613,66 @@ position: relative;
   color: #000000;
 }
 
-.link {
-  text-decoration: none;
-  color: #000000;
+.sort__wrap {
+  display: flex;
+  min-height: 85px;
+  /* отступ временный, потом с иконками и ПП исправить */
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1056px;
+
+}
+
+.sort__left {
+  display: flex;
+  align-items: baseline;
+  width: 518px;
+
+  justify-content: space-between;
+}
+
+.sort__right {
+  width: 34px;
+  height: 11px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sort__right-up:active path,
+.sort__right-down:active path,
+.sort__right-up:focus path,
+.sort__right-down:focus path,
+.sort__right-up:hover path,
+.sort__right-down:hover path{
+  fill: #81b3d2;  
+}
+
+.sort__right-up:disabled{
+  fill: #cacaca;
 }
 
 
+.sort__text {
+
+  font-size: 12px;
+
+}
+
+.sort__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 238px;
+}
+
+
+
+
+
+/* Преимущества - Преимущества - Преимущества - Преимущества - Преимущества - Преимущества - Преимущества - Преимущества */
 
 .advantages__wrap {
   display: flex;
@@ -712,8 +794,11 @@ position: relative;
   padding: 0;
 }
 
+
+/* Подвал - Подвал - Подвал - Подвал - Подвал - Подвал - Подвал - Подвал - Подвал - Подвал - Подвал - Подвал - Подвал */
+
 .footer {
-  min-height: 120px;
+  min-height: 122px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -795,54 +880,10 @@ position: relative;
   fill: #bdbbbc;
 }
 
-.sort__wrap {
-  display: flex;
-  min-height: 85px;
-  /* отступ временный, потом с иконками и ПП исправить */
-  justify-content: space-between;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 1056px;
 
-}
 
-.sort__left {
-  display: flex;
-  align-items: baseline;
-  width: 518px;
+/* Гостиницы - Гостиницы - Гостиницы - Гостиницы - Гостиницы - Гостиницы - Гостиницы - Гостиницы - Гостиницы - Гостиницы */
 
-  justify-content: space-between;
-}
-
-.sort__right {
-  width: 34px;
-  height: 11px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.sort__text {
-
-  font-size: 12px;
-
-}
-
-.sort__list {
-  display: flex;
-  align-items: center;
-  /* отступ временный, потом с иконками и ПП исправить */
-  justify-content: space-between;
-  width: 238px;
-}
-
-.button__wrap {
-  display: flex;
-  flex-wrap: wrap;
-  width: 258px;
-  justify-content: space-between;
-  height: 27px;
-}
 
 .hotels__list {
   box-sizing: border-box;
@@ -928,4 +969,38 @@ position: relative;
 .sort__right-up:active path,
 .sort__right-down:active path {
   fill: #81b3d2;
+}
+
+.hotels__stars--none path{
+ fill:white;
+}
+
+.button__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  width: 258px;
+  justify-content: space-between;
+  height: 27px;
+}
+
+
+.button {
+  display: block;
+  width: 142px;
+
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-transform: uppercase;
+  background-color: #766357;
+}
+
+.button--blue {
+  width: 110px;
+  background-color: #81b3d2;
+  text-align: center;
+  box-sizing: border-box;
+  padding-top: 3px;
 }

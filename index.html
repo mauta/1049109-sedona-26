@@ -17,25 +17,23 @@
           alt="Логотип  Седона"></a>
       <nav>
         <ul class="list header__nav--wrap ">
-          <li class="nav_item"><a class="link header__nav header__nav--first" href="#">Информация</a></li>
-          <li class="nav_item"><a class="link header__nav header__nav--second" href="#">Фото и видео</a></li>
-          <li class="nav_item"><a class="link header__nav header__nav--third" href="#">Карта штата</a></li>
-          <li class="nav_item"><a class="link header__nav header__nav--fourth" href="hotels.html">Гостиницы</a></li>
-
+          <li class="nav_item header__nav--first"><a class="link header__nav " href="#">Информация</a></li>
+          <li class="nav_item header__nav--second"><a class="link header__nav " href="#">Фото и видео</a></li>
+          <li class="nav_item header__nav--third"><a class="link header__nav " href="#">Карта штата</a></li>
+          <li class="nav_item header__nav--fourth"><a class="link header__nav " href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <h1 class="visually-hidden">Седона</h1>
-      <!-- банер седона -->
+
       <div class="welcome"> </div>
-      <!-- крутость седоны -->
       <section class="advantages">
 
         <h2 class="visually-hidden">5 причин крутости Седоны</h2>
 
         <div class="advantages__text">
-          <p class="title">Седона — небольшой городок в Аризоне,
+          <p class="title">Седона - небольшой городок в Аризоне,
             заслуживающий большего!</p>
           <p class="text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
 
@@ -53,20 +51,14 @@
 
             <ul class="list advantages__list-wrap">
               <li class="advantages__list advantages__tricks">
-                <!-- иконка на фон -->
-
                 <h4 class="title">Жильё</h4>
                 <p class="advantages__content">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
               </li>
               <li class="advantages__list advantages__tricks">
-                <!-- иконка на фон -->
-
                 <h4 class="title">Еда</h4>
                 <p class="advantages__content">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li class="advantages__list advantages__tricks">
-                <!-- иконка на фон -->
-
                 <h4 class="title">Сувениры</h4>
                 <p class="advantages__content">Не только китайского, но и местного производства!</p>
               </li>
@@ -113,73 +105,47 @@
       <section class="search">
         <h2 class="visually-hidden">Реклама поиска гостиницы</h2>
         <p class="title--big">Заинтересовались?</p>
-        <p class="text">
+        <p class="search__text">
           Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 
         <button class="search__button" type="button"> Поиск гостиницы в Седоне </button>
         <div class="search__map"></div>
 
-        <section class="modal">
+         <section class="modal"> 
           <h2 class="visually-hidden">Поиск гостиницы в Седоне</h2>
           <form class="modal__form" action="https://echo.htmlacademy.ru" method="get">
 
-            <p class="modal__item">
-              <label for="data_check_in">Дата Заезда:</label>
-              <input class="modal__input" type="text" id="data_check_in" name="data_check_in"
-                placeholder="24 апреля 2017">
-              <div class="modal__calendar-checkin">
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
-                  <path
-                    d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 
-                  0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 
-                  21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 
-                  0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 
-                  0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z" />
-                  <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 
-                  11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 
-                  8.225h2.625v2.066h-2.625z" />
-                </svg>
+            <div class="modal__item--wrap">
+              <div class="modal__item">
+                <label for="data_check_in">Дата Заезда:</label>
+                <input class="modal__input modal__calendar" type="text" id="data_check_in" name="data_check_in"
+                  placeholder="24 апреля 2017">
+               </div>
+              <div class="modal__item">
+                <label for="data_check_out">Дата Выезда:</label>
+                <input class="modal__input  modal__calendar" type="text" id="data_check_out" name="data_check_out"
+                  placeholder="4 июля 2017">
+
               </div>
-            </p>
-            <p class="modal__item">
-              <label for="data_check_out">Дата Выезда:</label>
-              <input class="modal__input" type="text" id="data_check_out" name="data_check_out"
-                placeholder="24 апреля 2017">
-              <div class="modal__calendar-checkout">
-                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
-                  <path
-                    d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 
-                    0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 
-                    21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 
-                    0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 
-                    0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z" />
-                  <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 
-                    11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 
-                    8.225h2.625v2.066h-2.625z" />
-                </svg>
+  
+              <div class="modal__item">
+  
+                <label class="label__count" for="count_adult">Взрослые:</label>
+                 <div class="modal__count">
+                  <button class="button__count" type="button"> - </button>
+                  <input class="modal__input modal__input--small " type="text" id="count_adult" name="count_adult"
+                    placeholder="0">
+                  <button class="button__count" type="button"> + </button>
+                </div>
+                 <label class="label__count" for="count_child">Дети:</label>
+                 <div class="modal__count">
+                  <button class="button__count" type="button"> - </button>
+                  <input class="modal__input modal__input--small" type="text" id="count_child" name="count_child"
+                    placeholder="0">
+                  <button class="button__count" type="button"> + </button>
+                </div>
+  
               </div>
-            </p>
-
-            <div class="modal__item">
-
-              <label class="label__count" for="count_adult">Взрослые:</label>
-
-              <div class="modal__count">
-                <button class="button__count" type="button"> - </button>
-                <input class="modal__input modal__input--small " type="text" id="count_adult" name="count_adult"
-                  placeholder="0">
-                <button class="button__count" type="button"> + </button>
-              </div>
-
-              <label class="label__count" for="count_child">Дети:</label>
-
-              <div class="modal__count">
-                <button class="button__count" type="button"> - </button>
-                <input class="modal__input modal__input--small" type="text" id="count_child" name="count_child"
-                  placeholder="0">
-                <button class="button__count" type="button"> + </button>
-              </div>
-
             </div>
             <button class="modal__button" type="submit">Найти</button>
           </form>
