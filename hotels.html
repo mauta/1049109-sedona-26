@@ -103,8 +103,13 @@
                 </div>
   
             </fieldset> 
+
+
           </div>
-        <button class="filter__button" type="submit">Показать</button> 
+
+          <div class="filter__button-wrap">
+              <button class="filter__button" type="submit">Показать</button>
+             </div>    
 
         </form>
 
@@ -126,7 +131,7 @@
           </div>
           <div class="sort__right">
 
-           <span class="sort__right-up" aria-disabled="true">
+           <span class="sort__right-up" >
               <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                 <path fill="#81b3d2" d="M5.5 0L0 10h11z" />
               </svg>
@@ -144,13 +149,13 @@
         <ul class="list hotels__list">
 
           <li class="hotel__wrap hotel__wrap--first">
-            <img src="/img/amara.jpg" width="135" height="90" alt="фото Amara Resort & spa">
+            <img src="img/amara.jpg" width="135" height="90" alt="фото Amara Resort & spa">
             <div class="hotel__info">
-              <h3 class="title hotel__title">Amara resort & spa</h3>
+              <h3 class="hotel__title">Amara resort & spa</h3>
 
               <div class="hotel__text--wrap">
-                <span class="hotel__text1">Гостиница</span>
-                <span class="hotel__text2">от 4000 р.</span>
+                <span class="hotel__text-kind">Гостиница</span>
+                <span class="hotel__text-price">от 4000 р.</span>
               </div>
 
               <div class="button__wrap">
@@ -187,13 +192,13 @@
           </li>
 
           <li class="hotel__wrap">
-            <img src="/img/desert.jpg" width="135" height="90" alt="фото Amara Resort & spa">
+            <img src="img/desert.jpg" width="135" height="90" alt="фото Amara Resort & spa">
             <div class="hotel__info">
-              <h3 class="title hotel__title">Desesrt quail inn</h3>
+              <h3 class="hotel__title">Desesrt quail inn</h3>
 
               <div class="hotel__text--wrap">
-                <span class="hotel__text1">Мотель</span>
-                <span class="hotel__text2">от 3000 р.</span>
+                <span class="hotel__text-kind">Мотель</span>
+                <span class="hotel__text-price">от 3000 р.</span>
               </div>
 
               <div class="button__wrap">
@@ -231,13 +236,13 @@
 
 
           <li class="hotel__wrap">
-            <img src="/img/villas.jpg" width="135" height="90" alt="фото Amara Resort & spa">
+            <img src="img/villas.jpg" width="135" height="90" alt="фото Amara Resort & spa">
             <div class="hotel__info">
-              <h3 class="title hotel__title">Villas at poco diablo</h3>
+              <h3 class="hotel__title">Villas at poco diablo</h3>
 
               <div class="hotel__text--wrap">
-                <span class="hotel__text1">Апартаменты</span>
-                <span class="hotel__text2">от 2000 р.</span>
+                <span class="hotel__text-kind">Апартаменты</span>
+                <span class="hotel__text-price">от 2000 р.</span>
               </div>
 
               <div class="button__wrap">
@@ -313,7 +318,8 @@
             </a></li>
         </ul>
 
-        <div class="footer__third"> website by
+        <div class="footer__third">
+            <p class="footer__text">website by</p>
           <a class="link link__academy" href="https://htmlacademy.ru/intensive/htmlcss">
             <span class="visually-hidden">HTML Academy</span>
 
