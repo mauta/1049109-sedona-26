@@ -160,13 +160,15 @@
   line-height: 36px;
   font-weight: bold;
   margin-bottom: 22px;
+  margin-top: 0;
+  padding-top: 50px;
 }
 
 .search {
   min-height: 865px;
   position: relative;
   box-sizing: border-box;
-  padding-top: 20px;
+  /* padding-top: 20px; */
 }
 
 .search__text {
@@ -214,6 +216,11 @@
   background-image: url(../img/map.jpg);
 }
 
+.search__block {
+  z-index: 100;
+  position: relative;
+  background-color: #ffffff;
+}
 
 /* Модалка - Модалка - Модалка - Модалка - Модалка - Модалка - Модалка - Модалка - Модалка */
 
@@ -227,7 +234,34 @@
   left: 50%;
   top: 290px;
   transform: translateX(-50%);
+  display: none;
+  z-index: 2;
 }
+
+
+
+@keyframes move {
+  0% {
+    left: 316px;
+    transform: translateY(-400px);
+
+  }
+
+  100% {
+    left: 316px;
+    transform: translateY(0px);
+
+  }
+}
+
+.modal__animation {
+  display: block;
+  position: absolute;
+  animation: move 5s;
+  z-index: 0;
+}
+
+
 
 .modal__form {
   width: 458px;
@@ -267,6 +301,33 @@
   padding-right: 30px;
   padding-left: 15px;
 }
+
+/* .modal__input--empty .modal__input,
+.modal__input--empty .modal__input--small[name="count_adult"]{
+  background-color: red;
+} */
+
+.modal__input::-webkit-input-placeholder,
+.modal__input::-moz-placeholder,
+.modal__input:-ms-input-placeholder {
+  color: #000000;
+}
+
+.modal__input--small::-webkit-input-placeholder,
+.modal__input--small::-moz-placeholder,
+.modal__input--small:-ms-input-placeholder {
+  color: #000000;
+}
+
+
+/* .modal__input--empty .modal__input::-webkit-input-placeholder,
+.modal__input--empty .modal__input::-moz-placeholder,
+.modal__input--empty .modal__input:-ms-input-placeholder
+{
+  color: red;
+} */
+
+
 
 .modal__input--small:hover,
 .modal__input:hover {
@@ -424,11 +485,14 @@
   outline: none;
 }
 
+
+
 /* Фильтр - Фильтр - Фильтр - Фильтр - Фильтр - Фильтр - Фильтр - Фильтр - Фильтр - Фильтр - Фильтр - Фильтр */
 
 .filter {
   background-color: #5496bd;
   background-image: url(../img/filter-background.jpg);
+  background-position: 0 -55px;
   color: #ffffff;
   text-align: left;
   /* временно */
@@ -520,15 +584,15 @@
 }
 
 .filter__fieldset--last {
-  width:320px;
+  width: 320px;
   min-height: 100px;
-  
+
   margin-right: 59px;
   margin-top: 25px;
   padding-top: 7px;
 }
 
-.filter__last-button-wrap{
+.filter__last-button-wrap {
   margin-left: auto;
 }
 
@@ -809,6 +873,8 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 0px;
+  position: relative;
+  z-index: 10;
 }
 
 .title {
@@ -1071,14 +1137,14 @@
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
- }
+}
 
 .hotel__title:hover {
   color: #81b3d2;
 }
 
 .hotel__title:active,
-.hotel__title:focus{
+.hotel__title:focus {
   color: #000000;
   opacity: 0.3;
 }
