@@ -13,14 +13,14 @@
 <body class="body">
   <div class="wrapper-center">
     <header class="header">
-      <a class="header__logo" href="index.html"><img src="img/logo-sedona.svg" width="140" height="72"
-          alt="Логотип  Седона"></a>
+      <a class="header__logo" href="index.html"><img src="img/logo-sedona.svg" width="140" height="72" alt="Логотип  Седона"></a>
       <nav>
         <ul class="list header__nav--wrap ">
-          <li class="nav_item header__nav--first"><a class="link header__nav " href="#">Информация</a></li>
+          <li class="nav_item header__nav--first"><a class="link header__nav " href="index.html">Информация</a></li>
           <li class="nav_item header__nav--second"><a class="link header__nav " href="#">Фото и видео</a></li>
           <li class="nav_item header__nav--third"><a class="link header__nav " href="#">Карта штата</a></li>
-          <li class="nav_item header__nav--fourth"><a class="link header__nav " href="hotels.html">Гостиницы</a></li>
+          <li class="nav_item header__nav--fourth"><a class="link header__nav header__nav-curent"
+              href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -110,18 +110,13 @@
                 <button class="filter__button" type="submit">Показать</button>
               </div>
             </div>
-
           </div>
-
-
-
         </form>
 
       </section>
 
       <section class="hotels">
         <h2 class="visually-hidden">Выбор гостиниц</h2>
-
         <div class="sort__wrap">
 
           <div class="sort__left">
@@ -134,14 +129,12 @@
             </ul>
           </div>
           <div class="sort__right">
-
-
-            <button class="sort__botton" type="button">
+            <button class="sort__button" type="button">
               <span class="sort__right-up"></span>
               <span class="visually-hidden">Сортировка по возрастанию</span>
             </button>
 
-            <button class="sort__botton" type="button" >
+            <button class="sort__button" type="button">
               <span class="sort__right-down"></span>
               <span class="visually-hidden">Сортировка по убыванию</span>
             </button>
@@ -197,7 +190,7 @@
           </li>
 
           <li class="hotel__wrap">
-            <img src="img/desert.jpg" width="135" height="90" alt="фото Amara Resort & spa">
+            <img src="img/desert.jpg" width="135" height="90" alt="фото Desert quail inn">
             <div class="hotel__info">
               <a href="#" class="hotel__title link">Desert quail inn</a>
 
@@ -243,7 +236,7 @@
 
 
           <li class="hotel__wrap">
-            <img src="img/villas.jpg" width="135" height="90" alt="фото Amara Resort & spa">
+            <img src="img/villas.jpg" width="135" height="90" alt="фото Villas at poco diablo">
             <div class="hotel__info">
               <a href="#" class="hotel__title link">Villas at poco diablo</a>
 
@@ -368,4 +361,6 @@
 
     </footer>
   </div>
+  <script src="js/minHotels.js">
+  </script>
 </body>

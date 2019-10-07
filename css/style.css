@@ -1,7 +1,5 @@
 /* НЕ ГЛОБАЛЬНЫЙ, ПЕРЕДЕЛАТЬ */
-.text {
-  padding-top: 8px;
-}
+
 
 
 /* Глобальное - Глобальное - Глобальное - Глобальное - Глобальное - Глобальное*/
@@ -29,7 +27,7 @@
   margin: 0;
   padding: 0;
   font-size: 14px;
-  font-family: "PT Sans";
+  font-family: "PT Sans","Tahoma", sans-serif;
   color: rgb(0, 0, 0);
 
   text-transform: uppercase;
@@ -41,7 +39,7 @@
 }
 
 .wrapper-center {
-  max-width: 1200px;
+  width: 1200px;
   margin: auto;
   position: relative;
   text-align: center;
@@ -82,13 +80,20 @@
 }
 
 .header__nav:hover,
-.header__nav:focus {
+.header__nav:focus
+ {
   color: #81b3d2;
   outline: none;
 }
 
+
+
 .header__nav:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.header__nav-curent{
+  color: #766357;
 }
 
 .header__nav--first {
@@ -143,7 +148,7 @@
   background-color: #435152;
   background-image: url(../img/intro-mask.svg), url(../img/welcome.png), url(../img/background.jpg);
   background-repeat: no-repeat;
-  background-size: auto, 39, 5%, cover;
+  background-size: auto, 39%, cover;
   background-position: center 453px, center 76px, center -55px;
 }
 
@@ -186,8 +191,8 @@
   color: #ffffff;
   border: none;
   margin-top: 31px;
-
-  font-family: "PT Sans";
+  cursor: pointer;
+  font-family: "PT Sans","Tahoma", sans-serif;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
@@ -212,7 +217,7 @@
 .search__map {
   width: 1200px;
   height: 594px;
-
+  background-color:#999999;
   background-image: url(../img/map.jpg);
 }
 
@@ -231,10 +236,9 @@
   background-color: #ffffff;
   font-weight: bold;
   position: absolute;
-  left: 50%;
+  left: 316px;
   top: 290px;
-  transform: translateX(-50%);
-  display: none;
+  
   z-index: 2;
 }
 
@@ -242,23 +246,44 @@
 
 @keyframes move {
   0% {
-    left: 316px;
-    transform: translateY(-400px);
+   transform: translateY(-400px);
 
   }
 
   100% {
-    left: 316px;
-    transform: translateY(0px);
+   transform: translateY(0px);
 
   }
 }
 
+@keyframes back {
+  0% {
+    transform: translateY(0px);
+
+  }
+
+  100% {
+   
+   transform: translateY(-400px);
+
+  }
+}
+
+.modal__hide{
+  display: none;
+}
+
 .modal__animation {
   display: block;
-  position: absolute;
-  animation: move 5s;
-  z-index: 0;
+  animation: move 3s;
+  z-index: 0; 
+
+}
+
+.modal__animation--back {
+  display: block;
+  animation: back 3s;
+  animation-fill-mode:forwards;
 }
 
 
@@ -302,30 +327,42 @@
   padding-left: 15px;
 }
 
-/* .modal__input--empty .modal__input,
-.modal__input--empty .modal__input--small[name="count_adult"]{
-  background-color: red;
-} */
 
-.modal__input::-webkit-input-placeholder,
-.modal__input::-moz-placeholder,
+
+.modal__input::-webkit-input-placeholder{
+  color: #000000;
+}
+.modal__input::-moz-placeholder{
+  color: #000000;
+}
 .modal__input:-ms-input-placeholder {
   color: #000000;
 }
 
-.modal__input--small::-webkit-input-placeholder,
-.modal__input--small::-moz-placeholder,
+.modal__input--small::-webkit-input-placeholder{
+  color: #000000;
+}
+.modal__input--small::-moz-placeholder{
+  color: #000000;
+}
 .modal__input--small:-ms-input-placeholder {
   color: #000000;
 }
 
 
-/* .modal__input--empty .modal__input::-webkit-input-placeholder,
-.modal__input--empty .modal__input::-moz-placeholder,
-.modal__input--empty .modal__input:-ms-input-placeholder
+.modal__input--empty::-webkit-input-placeholder{
+  color: red;
+}
+.modal__input--empty::-moz-placeholder{
+  color: red;
+}
+.modal__input--empty:-ms-input-placeholder
 {
   color: red;
-} */
+}
+
+
+
 
 
 
@@ -385,13 +422,13 @@
   width: 40px;
   height: 40px;
   color: #a9a9a9;
-  font-family: "PT Sans";
+  font-family: "PT Sans","Tahoma", sans-serif;
   font-size: 30px;
   font-weight: 700;
   vertical-align: middle;
   text-align: center;
   position: relative;
-
+  cursor: pointer;
 }
 
 .button__minus::before {
@@ -452,7 +489,7 @@
   padding-bottom: 17px;
   background-color: #81b3d2;
   color: #ffffff;
-  font-family: "PT Sans";
+  font-family: "PT Sans","Tahoma", sans-serif;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
@@ -460,6 +497,7 @@
   text-align: center;
   border: none;
   margin-top: 22px;
+  cursor: pointer;
 }
 
 .modal__button:hover,
@@ -630,7 +668,7 @@
 .filter__price-input {
   width: 50px;
   margin: 0;
-
+  height: 32px ;
   color: inherit;
   font: inherit;
 
@@ -734,7 +772,7 @@
 
 .sort__link {
   min-width: 75px;
-  font-family: "PT Sans";
+  font-family: "PT Sans","Tahoma", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -788,13 +826,14 @@
   padding-top: 3px;
 }
 
-.sort__botton {
+.sort__button {
   border: none;
   background-color: transparent;
   width: 11px;
   height: 11px;
   position: relative;
   outline: none;
+  cursor: pointer;
 }
 
 .sort__right-up {
@@ -821,31 +860,35 @@
   left: 0;
 }
 
-.sort__botton:active .sort__right-up,
-.sort__botton:focus .sort__right-up {
+.sort__right-down--active{
+  border-top: 11px solid #81b3d2;
+}
+
+.sort__button:active .sort__right-up,
+.sort__button:focus .sort__right-up {
   border-bottom: 11px solid #81b3d2;
 
 }
 
-.sort__botton:hover .sort__right-up {
+.sort__button:hover .sort__right-up {
   border-bottom: 11px solid black;
 }
 
 
-.sort__botton:active .sort__right-down,
-.sort__botton:focus .sort__right-down {
+.sort__button:active .sort__right-down,
+.sort__button:focus .sort__right-down {
   border-top: 11px solid #81b3d2;
 }
 
-.sort__botton:hover .sort__right-down {
+.sort__button:hover .sort__right-down {
   border-top: 11px solid black;
 }
 
-.sort__botton:disabled .sort__right-up {
+.sort__button:disabled .sort__right-up {
   border-bottom: 11px solid #cacaca;
 }
 
-.sort__botton:disabled .sort__right-down {
+.sort__button:disabled .sort__right-down {
   border-top: 11px solid #cacaca;
 }
 
@@ -889,7 +932,11 @@
   margin-top: 60px;
   margin-right: auto;
   margin-left: auto;
-  margin-bottom: 0px;
+  margin-bottom: 0px;  
+}
+
+.advantages__text-small{
+  padding-top: 8px;
 }
 
 .advantages__title {
@@ -1067,7 +1114,7 @@
   background-color: #81b3d2;
   align-items: center;
   justify-content: center;
-
+  cursor: pointer;
 }
 
 .button__social:hover,
@@ -1224,7 +1271,7 @@
 .button {
   display: block;
   width: 142px;
-
+  cursor: pointer;
   border: none;
   color: #ffffff;
   font-size: 14px;
@@ -1240,4 +1287,5 @@
   text-align: center;
   box-sizing: border-box;
   padding-top: 3px;
+  cursor: pointer;
 }
