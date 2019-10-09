@@ -486,13 +486,13 @@
 }
 
 .modal__calendar:hover {
-  background-image: url("../img/calendarHover.svg");
+  background-image: url("../img/calendarhover.svg");
   background-repeat: no-repeat;
 }
 
 .modal__calendar:active,
 .modal__calendar:focus {
-  background-image: url("../img/calendarActive.svg");
+  background-image: url("../img/calendaractive.svg");
   background-repeat: no-repeat;
 }
 
